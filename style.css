@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 500000px;
+}
+header {
+    position: fixed;
+    width: 100vw;
+    height: 6rem;
+    background-color: #F9E4CB;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo-etepam {
+    width: 20rem;
+    height: 20rem;
+}
+
+.barra-de-pesquisa {
+    border-radius: 12px;
+    border: 1px solid rgb(189, 178, 178);
+    outline: none;
+    padding: 10px 5px 10px 15px;
+    width: 30vw;
+}
+
+.nav-header, .login-e-cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lista-de-desejos {
+    width: 2.9rem;
+}
+
+.login-e-cadastro {
+    margin-left: 60px;
+    width: 50px;
+    margin-right: 50px;
+}
+.icon-usuario, .icon-favoritos, .livros-lidos{
+    font-size: 25px;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+.icon-usuario {
+    margin-right: 10px;
+}
