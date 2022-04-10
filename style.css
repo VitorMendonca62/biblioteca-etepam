@@ -1,54 +1,122 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
-body {
-    height: 500000px;
-}
+
 header {
-    position: fixed;
-    width: 100vw;
-    height: 6rem;
-    background-color: #F9E4CB;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  position: fixed;
+  width: 100vw;
+  height: 6rem;
+  background-color: #f9e4cb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo-etepam {
-    width: 20rem;
-    height: 20rem;
+  width: 20rem;
+  height: 5rem;
+  margin-left: 20px;
 }
 
 .barra-de-pesquisa {
-    border-radius: 12px;
-    border: 1px solid rgb(189, 178, 178);
-    outline: none;
-    padding: 10px 5px 10px 15px;
-    width: 30vw;
+  border-radius: 12px;
+  border: 1px solid rgb(189, 178, 178);
+  outline: none;
+  padding: 10px 5px 10px 15px;
+  width: 30vw;
 }
 
-.nav-header, .login-e-cadastro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav-header,
+.login-e-cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .lista-de-desejos {
-    width: 2.9rem;
+  width: 2.9rem;
 }
 
 .login-e-cadastro {
-    margin-left: 60px;
-    width: 50px;
-    margin-right: 50px;
+  margin-left: 60px;
+  width: 50px;
+  margin-right: 90px;
 }
-.icon-usuario, .icon-favoritos, .livros-lidos{
-    font-size: 25px;
-    margin-left: 60px;
-    cursor: pointer;
+.icon-usuario,
+.icon-favoritos,
+.livros-lidos {
+  font-size: 25px;
+  margin-left: 60px;
+  cursor: pointer;
 }
 
 .icon-usuario {
-    margin-right: 10px;
+  margin-right: 10px;
+}
+
+/* FIM DO HEADER */
+/*COMEÇO DO MAIN*/
+main {
+  padding-top: 6rem;
+  background-color: #fed7a9;
+}
+.foto-principal {
+  width: 98.7vw;
+  height: 450px;
+}
+.categorias > h2 {
+  color: #3d3838;
+}
+.livros {
+  width: 98.8vw;
+  background-color: #f9e4cb;
+}
+.titulo-categoria {
+  padding: 40px;
+}
+.livros {
+  display: flex;
+  justify-content: center;
+}
+.livros > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 13rem;
+  padding: 10px;
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.livros .livro-titulo {
+  color: #524c4c;
+  background-color: #9ae3ed;
+  border-radius: 12px;
+  width: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  margin: 10px;
+  font-size: 1rem;
+}
+.livros .livro-autor {
+  color: #524c4c;
+  margin-bottom: 10px;
+}
+
+.livros .livro-condicao {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.livros .estrelas .fa-star {
+  color: yellow;
 }
