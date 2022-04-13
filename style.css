@@ -58,8 +58,8 @@ header {
 
 /* FIM DO HEADER */
 /*COMEÇO DO MAIN*/
-main {
-  padding-top: 6rem;
+.main-categorias {
+  padding-top: 6em;
   background-color: #fed7a9;
 }
 .foto-principal {
@@ -70,15 +70,13 @@ main {
   color: #3d3838;
 }
 .livros {
-  width: 98.8vw;
+  width: 98.7vw;
   background-color: #f9e4cb;
+  display: flex;
+  justify-content: center;
 }
 .titulo-categoria {
   padding: 40px;
-}
-.livros {
-  display: flex;
-  justify-content: center;
 }
 .livros > div {
   display: flex;
@@ -120,3 +118,53 @@ main {
 .livros .estrelas .fa-star {
   color: yellow;
 }
+
+.div-foto-principal {
+  background-image: url(img/foto-main.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: " ";
+  height: 27rem;
+}
+
+@media screen and (min-width: 680px) {
+  .div-foto-principal {
+    height: 11rem;
+  }
+ }
+@media screen and (min-width: 777px) {
+  .div-foto-principal {
+    height: 13rem;
+  }
+ }
+@media screen and (min-width: 906px) {
+  .div-foto-principal {
+    height: 15rem;
+  }
+ }
+@media screen and (min-width: 1088px) {
+  .div-foto-principal {
+    height: 22rem;
+  }
+ }
+@media screen and (min-width: 1350px) {
+  .div-foto-principal {
+    height: 28rem;
+  }
+ }
+ @media screen and (min-width: 1834px) {
+  .div-foto-principal {
+    height: 40rem;
+  }
+ }
+ @media screen and (min-width: 2751px) {
+  .div-foto-principal {
+    height: 60rem;
+  }
+ }
+ @media screen and (min-width: 3688px) {
+  .div-foto-principal {
+    height: 80rem;
+  }
+ }

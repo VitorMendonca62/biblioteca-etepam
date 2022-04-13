@@ -40,8 +40,8 @@
     <meta name="msapplication-TileColor" content="#2b5797" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="style.css" />
-
-    <title>ETEPAM – Biblioteca</title>
+    <link rel="stylesheet" href="sinopse.css">
+    <title>ETEPAM – NomeLivro</title>
   </head>
   <body>
     <header>
@@ -66,24 +66,28 @@
         </span>
       </nav>
     </header>
-    <main class="main-categorias">
-      <div class="div-foto-principal">
-        
-      </div>
-      <div class="container-categorias">
-        <section class="categorias mais-polulares">
-          <h2 class="titulo-categoria">Mais Populares</h2>
-          <div class="livros"></div>
-        </section>
-        <section class="categorias recomendados">
-          <h2 class="titulo-categoria">Recomendados</h2>
-            <div class="livros"></div>
-        </section>
+    <main class="main-informacoes">
+      <section class="section-informacoes">
+        <div>
+          <img src="img/fotos-livros/o-cortico.png" class="foto-livro"/>
+        </div>
+        <div class="informacoes">
+          <h2 class="titulo">A escrava Isaura</h2>
+          <p class="autor">Autor: Bernado Guimarães</p>
+          <span class="estrelas-sinopse">
+            ESTRELAS
+          </span>
+          <p class="sinopse">
+            A obra narra a história de Isaura, uma escrava branca que foi criada
+            como filha pela família que a possuía. Assim, ela é protegida pela
+            matriarca, que prometeu libertar a escrava após sua morte, porém não
+            é isso que ocorre. Isaura torna-se propriedade de Leôncio após a
+            morte dos pais dele.
+          </p>
+          <button class="solicitacao"><b>SOLICITAR</b></button>
+        </div>
       </section>
-      </div>
-      
     </main>
     <script src="src/preencherIcons.js"></script>
-    <script src="src/livros.js"></script>
   </body>
 </html>

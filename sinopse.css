@@ -1,0 +1,49 @@
+.section-informacoes {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  margin-left: 5rem;
+  margin-top: 2.5rem;
+  font-weight: 500;
+  color: #352f2f;
+}
+.main-informacoes {
+  padding-top: 6em;
+  background-color: #ffefdc;
+}
+.foto-livro {
+  width: 15rem;
+  margin-right: 2rem;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.titulo {
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.autor {
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+.sinopse {
+  max-width: 28rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.solicitacao {
+  width: 12rem;
+  height: 3rem;
+  background: #eba654;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  cursor: pointer;
+}
+.solicitacao > b {
+  font-weight: 1000;
+}
+.solicitacao:hover {
+  background: #af7d40;
+}

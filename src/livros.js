@@ -59,4 +59,3 @@ function fabricarLivros(livros) {
    </div>
  </div>`;
 }
-
