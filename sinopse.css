@@ -10,6 +10,7 @@
 .main-informacoes {
   padding-top: 6em;
   background-color: #ffefdc;
+  height: 100vh;
 }
 .foto-livro {
   width: 15rem;

@@ -26,25 +26,19 @@ for (let i = 1; i <= 5; i++) {
 function gerarNumeroAleatorio(min, max) {
   min > max ? ([min, max] = [max, min]) : false;
   let numero = Math.floor(Math.random() * (max - min) + min);
+
   const conferirSeJaFoiGerado = () =>
     numerosAleatoriosJaGerados.indexOf(numero) !== -1;
 
-  const gerarNovoNumero = (min, max) => {
-    min > max ? ([min, max] = [max, min]) : false;
-    numero = Math.floor(Math.random() * (max - min) + min);
-
-    conferirSeJaFoiGerado()
-      ? gerarNovoNumero(0, livros.imgs.length)
-      : numerosAleatoriosJaGerados.push(numero);
+  const novoNumero = () => {
+    numero = gerarNumeroAleatorio(0, livros.imgs.length);
+    if (conferirSeJaFoiGerado()) {
+      novoNumero(0, livros.imgs.length);
+    } else {
+      numerosAleatoriosJaGerados.push(numero);
+      return numero;
+    }
   };
-
-  if (conferirSeJaFoiGerado()) {
-    gerarNovoNumero(0, livros.imgs.length);
-  } else {
-    numerosAleatoriosJaGerados.push(numero);
-    return numero;
-  }
-  return numero;
 }
 
 function fabricarLivros(livros) {
