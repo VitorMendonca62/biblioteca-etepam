@@ -1,6 +1,13 @@
+.div-selects {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+
 .parte-superior a {
   padding: 25px;
-
 }
 select{
     padding: 5px;

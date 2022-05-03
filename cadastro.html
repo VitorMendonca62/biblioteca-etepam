@@ -31,7 +31,6 @@
       sizes="16x16"
       href="img/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="img/favicon/site.webmanifest" />
     <link
       rel="mask-icon"
       href="img/favicon/safari-pinned-tab.svg"
@@ -93,6 +92,9 @@
             type="text"
             placeholder="Ex: (81) 9XXXX-XXXX"
             name="telefone"
+            id="telefone"
+            maxlength="15"
+  
             required
           />
         </p>
@@ -102,11 +104,13 @@
             type="text"
             placeholder="Matrícula"
             name="matricula"
+            id="matricula"
+            maxlength="7"
             required
           />
-          <a href="#">Como conseguir a matricula?</a>
+          <a href="img/Como conseguir a sua matricula.pdf" target="_blank">Como conseguir a matricula?</a>
         </p>
-
+        <div class="div-selects">
           <p class="login div-ensino selects">
             <label> Ensino</label>
             <select class="select-ensino" name="ensino" required>
@@ -131,6 +135,7 @@
               <option>LOG</option>
             </select>
         </p>
+        </div>
 
         <button class="botao-login">Cadastrar</button>
       </form>
@@ -138,4 +143,5 @@
   </body>
   <script src="src/preencherIcons.js"></script>
   <script src="src/cadastro.js"></script>
+  <script src="src/mascara.js"></script>
 </html>

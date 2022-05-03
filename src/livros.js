@@ -26,19 +26,6 @@ for (let i = 1; i <= 5; i++) {
 function gerarNumeroAleatorio(min, max) {
   min > max ? ([min, max] = [max, min]) : false;
   let numero = Math.floor(Math.random() * (max - min) + min);
-
-  const conferirSeJaFoiGerado = () =>
-    numerosAleatoriosJaGerados.indexOf(numero) !== -1;
-
-  const novoNumero = () => {
-    numero = gerarNumeroAleatorio(0, livros.imgs.length);
-    if (conferirSeJaFoiGerado()) {
-      novoNumero(0, livros.imgs.length);
-    } else {
-      numerosAleatoriosJaGerados.push(numero);
-      return numero;
-    }
-  };
 }
 
 function fabricarLivros(livros) {
