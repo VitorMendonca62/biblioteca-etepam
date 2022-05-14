@@ -66,6 +66,9 @@
           <p>Login / Cadastro</p>
         </span>
       </nav>
+      <nav class="nav-header-mobile">
+        <i class="fa fa-bars"></i>
+      </nav>
     </header>
     <main>
       <form action="" method="post">
@@ -84,6 +87,26 @@
             placeholder="Ex.: aluno@aluno.educacao.pe.gov.br"
             name="email"
             required
+          />
+        </p>
+        <p class="login div-senha">
+          <label> Senha</label>
+          <input
+            type="password"
+            placeholder="Senha"
+            name="senha"
+            required
+            maxlength="15"
+          />
+        </p>
+        <p class="login div-senha">
+          <label> Confirmar senha</label>
+          <input
+            type="password"
+            placeholder="Confirmar senha"
+            name="confirmarSenha"
+            required
+            maxlength="15"
           />
         </p>
         <p class="login div-telefone">
@@ -144,4 +167,5 @@
   <script src="src/preencherIcons.js"></script>
   <script src="src/cadastro.js"></script>
   <script src="src/mascara.js"></script>
+  
 </html>

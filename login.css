@@ -1,6 +1,4 @@
-html {
-    height: 100vh;
-}
+
 main {
   padding-top: 6rem;
   background-color: #fed7a9;
@@ -87,4 +85,15 @@ form {
 }
 .botao-login:active {
   box-shadow: none;
+}
+
+@media (max-width: 920px) {
+  main {
+    height: 38em;
+  }
+}
+@media (max-width: 425px) {
+  main {
+    height: 45em;
+  }
 }

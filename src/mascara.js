@@ -4,10 +4,12 @@ function mascara(input, funcao) {
 }
 function mascararNome(valor) {
   valor = valor.replace(/\d/g, "");
+  valor = valor.replace(/[^a-z0-9]/gi, "")
   return valor;
 }
 function mascararMatricula(valor) {
   valor = valor.replace(/\D/g, ""); //Remove tudo o que não é dígito
+  console.log("a")
   return valor;
 }
 function mascararTelefone(valor) {
@@ -19,11 +21,11 @@ function mascararTelefone(valor) {
 const nomeTag = (elemento) => document.getElementsByName(elemento)[0];
 
 window.onload = () => {
-  nomeTag("telefone").onkeyup = function() {
-    mascara(this, mascararTelefone);
-  };
   nomeTag("matricula").onkeyup = function() {
     mascara(this, mascararMatricula);
+  };
+  nomeTag("telefone").onkeyup = function() {
+    mascara(this, mascararTelefone);
   };
   nomeTag("nome").onkeyup = function() {
     mascara(this, mascararNome);

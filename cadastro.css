@@ -4,8 +4,6 @@
   flex-direction: row;
   width: 100%;
 }
-
-
 .parte-superior a {
   padding: 25px;
 }
@@ -13,4 +11,8 @@ select{
     padding: 5px;
     color: rgb(39, 37, 37);
     outline: none;
+}
+
+main {
+  height: 45rem;
 }
