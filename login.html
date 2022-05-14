@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="img/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login.css" />
+
+    <title>ETEPAM – Login</title>
+  </head>
+  <body>
+    <header>
+      <div class="div-logo-etepam">
+        <img src="img/etepam-logo-aberta.svg" class="logo-etepam" />
+      </div>
+      <div class="div-barra-de-pesquisa">
+        <input
+          type="search"
+          name="barra-de-pesquisa"
+          class="barra-de-pesquisa"
+          placeholder="O que você procura?"
+        />
+      </div>
+      <nav class="nav-header">
+        <i class="fa fa-heart-o icon-favoritos"></i>
+
+        <i class="fa fa-check-square-o livros-lidos"></i>
+        <span class="login-e-cadastro" style="cursor: pointer">
+          <i class="fa fa-user-circle-o icon-usuario"></i>
+          <p>Login / Cadastro</p>
+        </span>
+      </nav>
+      <nav class="nav-header-mobile">
+        <i class="fa fa-bars"></i>
+      </nav>
+    </header>
+    <main>
+      <form
+        action="http://localhost:4040/login-usuario"
+        class="formulario"
+        method="post"
+      >
+        <div class="parte-superior-forms">
+          <a href="index.html">Voltar</a>
+          <h2>Login</h2>
+        </div>
+        <p class="login div-matricula">
+          <label> Sua matricula</label>
+          <input
+            type="text"
+            placeholder="Matrícula"
+            name="matricula"
+            id="matricula"
+            maxlength="7"
+            required
+          />
+          <a href="img/Como conseguir a sua matricula.pdf" target="_blank"
+            >Como conseguir a matricula?</a
+          >
+        </p>
+        <p class="login div-senha">
+          <label> Senha</label>
+          <input
+            type="password"
+            placeholder="Senha"
+            name="senha"
+            required
+            maxlength="15"
+          />
+        </p>
+        <div class="links">
+          <a href="#">Esqueci minha senha</a>
+          <a href="cadastro.html"> Não tem uma conta? Cadastre-se</a>
+        </div>
+
+        <button class="botao-login">Login</button>
+      </form>
+    </main>
+    <script src="src/preencherIcons.js"></script>
+    <script src="src/mascara.js"></script>
+    <script src="src/login.js"></script>
+  </body>
+</html>
