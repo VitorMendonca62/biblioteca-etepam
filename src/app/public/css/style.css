@@ -15,7 +15,7 @@ header {
   justify-content: space-between;
 }
 .div-logo-etepam {
-  flex-grow: 5;
+  flex-grow: 3;
 }
 .div-barra-de-pesquisa {
   flex-grow: 3;
@@ -30,8 +30,8 @@ header {
 }
 
 .fechada {
-  width: 3.8em;
-  height: 3.8em;
+  width: 3.6em;
+  height: 3.6em;
 }
 
 .barra-de-pesquisa {
