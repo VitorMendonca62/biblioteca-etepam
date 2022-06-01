@@ -1,5 +1,5 @@
-const express = require("express")
-const app = express()
-const bodyParser = require("body-parser")
+const app = require("./app");
 
-app.use(bodyParser.urlencoded({extended: true}))
+app.listen(4041, () => {
+  console.log("Server rodando na url: http://localhost:4041/");
+});
