@@ -34,7 +34,7 @@ function fabricarLivros(livros) {
 
   numerosAleatoriosJaGerados.forEach(e => {
     categorias[0].children[1].innerHTML += `<div>
-    <img src="../img/fotos-livros/${livros.imgs[e]}.png" />
+    <img src="../assets/img/fotos-livros/${livros.imgs[e]}.png" />
     <p class="livro-titulo">${livros.titulo[e]}</p>
     <p class="livro-autor">${livros.autor[e]}</p>
     <div class="estrelas">

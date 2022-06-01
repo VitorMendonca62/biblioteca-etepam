@@ -22,7 +22,7 @@ const desPreencherUsuario = () =>
   (iconUsuario.className = "fa fa-user-circle-o icon-usuario");
 
 const direcionarUsuario = (e) => {
-  window.location.assign("login.html");
+  window.location.assign("login");
 };
 
 iconFavoritos.addEventListener("mouseenter", preencherFavoritos, false);
@@ -40,11 +40,11 @@ const logo = document.querySelector(".logo-etepam");
 
 const verificarTela = () => {
   const mostrarLogoFechada = () => {
-    logo.src = "img/etepam-logo-fechada.png";
+    logo.src = "assets/img/etepam-logo-fechada.png";
     logo.classList.add("fechada");
   };
   const mostrarLogoAberta = () => {
-    logo.src = "img/etepam-logo-aberta.svg";
+    logo.src = "assets/img/etepam-logo-aberta.svg";
     logo.classList.remove("fechada")
   };
 

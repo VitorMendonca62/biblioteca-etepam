@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <form action="http://localhost:4041/cadastrar-livro" method="post">
+        <div>
+            <input type="text" required placeholder="titulo" name="titulo">
+            <input type="text" required placeholder="autor" name="autor">
+            <input type="number" required max="5" placeholder="estrelas" name="estrelas">
+            <input type="text" required placeholder="sinopse" name="sinopse">
+            <input type="file" required name="foto">
+            <input type="submit" value="Enviar" >
+        </div>
+    </form>
+</body>
+</html>
