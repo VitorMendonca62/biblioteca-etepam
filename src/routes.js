@@ -1,8 +1,8 @@
 const express = require('express');
 const routes = express.Router()
 const path = require('path');
-
-const {Livros} = require("./database/index");
+const { user } = require('./config/database');
+const {Livros, Users} = require("./database/index");
 
 routes.get("/login", (req,res) => {
     res.sendFile(path.resolve(__dirname + "/../public/html/login.html"))
@@ -19,14 +19,16 @@ routes.get("/cadastro-livro", (req,res) => {
 })
 
 routes.post("/cadastrar-livro", async (req,res) => {
-    const livro = await Livros.create({
-        titulo: req.body.titulo,
-        autor: req.body.autor,
-        estrelas: req.body.estrelas,
-        sinopse: req.body.sinopse,
-    })
+    await Livros.create(req.body)
     .then(() => res.redirect("/cadastro-livro"))
     .catch((err) => console.log("ERRO:" + err))
+})
+
+routes.post("/cadastrar-user", async (req,res) => {
+    await Users.create(req.body)
+    .then(() => res.redirect("/"))
+    .catch((err) => console.log("ERRO:" + err))
+
 })
 
 
