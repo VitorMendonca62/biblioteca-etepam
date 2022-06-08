@@ -1,0 +1,9 @@
+// Só a nossa aplicacao sabe as credencias de acesso
+// então esse arquivo vai informar ao sequelize quais as credencias de acesso
+const path = require('path');
+
+module.exports = {
+    config: path.resolve(__dirname, "src", "config", "database.js"), // O caminho absoluto para as configurações
+    'migrations-path': path.resolve( __dirname, 'src', 'database', 'migrations')// Caminho abusoluto para aonde as migrati vão
+
+}

@@ -6,6 +6,7 @@ const path = require("path");
 app.use(express.static(path.resolve(__dirname + "/../public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+require('./database');
 
 app.use(routes);
 module.exports = app;

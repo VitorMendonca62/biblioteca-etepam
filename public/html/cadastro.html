@@ -71,14 +71,14 @@
       </nav>
     </header>
     <main>
-      <form action="http://localhost:4041/cadastrar-user" method="post">
+      <form action="http://localhost:4041/auth/cadastrar-user" method="post">
         <div class="parte-superior-forms">
           <a href="/">Voltar</a>
           <h2>Cadastro</h2>
         </div>
         <p class="login div-nome">
           <label> Nome completo</label>
-          <input type="text" placeholder="Nome completo" name="nome" required />
+          <input type="text" placeholder="Nome completo" name="name" required />
         </p>
         <p class="login div-email">
           <label> Email institucional</label>
@@ -114,7 +114,7 @@
           <input
             type="text"
             placeholder="Ex: (81) 9XXXX-XXXX"
-            name="telefone"
+            name="number"
             id="telefone"
             maxlength="15"
   
