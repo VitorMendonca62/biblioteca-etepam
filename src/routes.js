@@ -2,7 +2,7 @@ const express = require("express");
 const routes = express.Router();
 const path = require("path");
 const { Livros, Users } = require("./database/index");
-const { upload } = require("./config/multer");
+const { upload } = require("./config/multer")
 
 const UserController = require('./app/controllers/UserController'); 
 
