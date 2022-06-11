@@ -1,3 +1,11 @@
+async function getBooks(){
+  const response = await fetch("http://localhost:4041/books/cadaster-book")
+  const books = await response.json()
+  console.log(books)
+}
+
+getBooks()
+
 const livros = {
   imgs: ["o-cortico", "a-escrava-isaura", "o-ateneu", "a-5-onda", "o-mulato"],
   titulo: [

@@ -2,12 +2,18 @@ const express = require("express");
 const routes = express.Router();
 const path = require("path");
 const { Livros, Users } = require("./database/index");
-const { upload } = require("./config/multer")
+const { upload } = require("./config/multer");
 
-const UserController = require('./app/controllers/UserController'); 
+const UserController = require("./app/controllers/UserController");
+const BookController = require("./app/controllers/BookController");
+routes.get("/cadastro-livro", (req, res) => {
+  res.sendFile(path.resolve(__dirname + "/../public/html/cadastro-livro.html"));
+});
+routes.post("/auth/cadastrar-user", UserController.store);
+routes.get("/auth/cadastrar-user", UserController.index);
 
-routes.post("/auth/cadastrar-user", UserController.store)
-routes.get("/auth/cadastrar-user", UserController.index)
+routes.post("/books/cadaster-book", BookController.store)
+routes.get("/books/cadaster-book", BookController.index);
 
 module.exports = routes;
 
