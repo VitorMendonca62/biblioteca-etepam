@@ -1,14 +1,23 @@
 async function getBooks() {
   const response = await fetch("http://localhost:4041/books/cadaster-book");
   const books = await response.json();
-  // books.forEach(e => console.log(e.id))
+  const categorias = document.getElementsByClassName("categorias");
+  categorias[0].children[1].innerHTML += `
+<div>
+   <img src="../../../uploads/capas/${books[1].path}" />
+    <p class="livro-titulo">${books[1].titulo}</p>
+   <p class="livro-autor">${books[1].autor}</p>
+    <div class="estrelas">
+   
+   </div>
+ </div>
+`;
+  return books;
 }
 
-getBooks();
+const livros = getBooks();
 
 // const numerosAleatoriosJaGerados = [];
-// const categorias = document.getElementsByClassName("categorias");
-// fabricarLivros(livros);
 
 // function gerarNumeroAleatorio(min, max) {
 //   min > max ? ([min, max] = [max, min]) : false;
@@ -24,15 +33,14 @@ getBooks();
 //   for (let i = 1; i <= 5; i++) {
 //     gerarNumeroAleatorio(0, livros.imgs.length);
 //   }
-// require('');
-//   numerosAleatoriosJaGerados.forEach((e) => {
-//     categorias[0].children[1].innerHTML += `<div>
-//     <img src="../../../uploads/capas-livros/${livros.imgs[e]}.png" />
-//     <p class="livro-titulo">${livros.titulo[e]}</p>
-//     <p class="livro-autor">${livros.autor[e]}</p>
-//     <div class="estrelas">
-   
-//     </div>
-//   </div>`;
-//   });
+// numerosAleatoriosJaGerados.forEach((e) => {
+//   categorias[0].children[1].innerHTML += `<div>
+//   <img src="../../../uploads/capas-livros/${livros.imgs[e]}.png" />
+//   <p class="livro-titulo">${livros.titulo[e]}</p>
+//   <p class="livro-autor">${livros.autor[e]}</p>
+//   <div class="estrelas">
+
+//   </div>
+// </div>`;
+// });
 // }

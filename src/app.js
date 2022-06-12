@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const routes = require("./routes");
 const path = require("path");
-const multer = require("multer");
 
 
 app.use(express.static(path.resolve(__dirname + "/../public")));

@@ -15,7 +15,11 @@
     </style>
   </head>
   <body>
-    <form action="http://localhost:4041/books/cadaster-book" method="post">
+    <form
+      action="http://localhost:4041/books/cadaster-book"
+      method="post"
+      enctype="multipart/form-data"
+    >
       <div>
         <input type="text" required placeholder="titulo" name="titulo" />
         <input type="text" required placeholder="autor" name="autor" />
@@ -27,10 +31,14 @@
           name="estrelas"
         />
         <input type="text" required placeholder="sinopse" name="sinopse" />
-        <input type="file" required name="capaLivro" accept="image/png, image/jpeg, image/jpg" />
+        <input
+          type="file"
+          required
+          name="capaLivro"
+          accept="image/*"
+        />
         <input type="submit" value="Enviar" />
       </div>
     </form>
-    <script src="../assets/js/uploadCapaLivro.js"></script>
   </body>
 </html>
