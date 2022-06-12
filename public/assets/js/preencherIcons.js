@@ -3,6 +3,8 @@ const iconJaLidos = document.getElementsByClassName("livros-lidos")[0];
 const divLoginCadastro = document.getElementsByClassName("login-e-cadastro")[0];
 const iconUsuario = document.getElementsByClassName("icon-usuario")[0];
 
+const icons = [iconFavoritos, iconJaLidos, iconUsuario];
+
 const preencherFavoritos = () =>
   (iconFavoritos.className = "fa fa-heart icon-favoritos");
 const desPreencherFavoritos = () => {
@@ -25,14 +27,30 @@ const direcionarUsuario = (e) => {
   window.location.assign("login");
 };
 
-iconFavoritos.addEventListener("mouseenter", preencherFavoritos, false);
-iconFavoritos.addEventListener("mouseout", desPreencherFavoritos, false);
 
-iconJaLidos.addEventListener("mouseenter", preencherJaLidos, false);
-iconJaLidos.addEventListener("mouseout", desPreencherJaLidos, false);
+const preencherIcons = (e) => {
+  const elem = e.target;
+  elem.className = elem.className.replace("-o", "");
+};
+const desPreencherIcons = (e) => {
+  const elem = e.target;
+  let classParaRemover = elem.classList[1]
+  elem.className = elem.className.replace(classParaRemover, classParaRemover+="-o");
+};
 
-divLoginCadastro.addEventListener("mouseenter", preencherUsuario, false);
-divLoginCadastro.addEventListener("mouseout", desPreencherUsuario, false);
+icons.forEach((icon) => {
+  icon.addEventListener("mouseenter", preencherIcons, false);
+  icon.addEventListener("mouseout", desPreencherIcons, false);
+});
+
+// iconFavoritos.addEventListener("mouseenter", preencherFavoritos, false);
+// iconFavoritos.addEventListener("mouseout", desPreencherFavoritos, false);
+
+// iconJaLidos.addEventListener("mouseenter", preencherJaLidos, false);
+// iconJaLidos.addEventListener("mouseout", desPreencherJaLidos, false);
+
+// divLoginCadastro.addEventListener("mouseenter", preencherUsuario, false);
+// divLoginCadastro.addEventListener("mouseout", desPreencherUsuario, false);
 
 divLoginCadastro.addEventListener("click", direcionarUsuario, false);
 
@@ -45,11 +63,9 @@ const verificarTela = () => {
   };
   const mostrarLogoAberta = () => {
     logo.src = "assets/img/etepam-logo-aberta.svg";
-    logo.classList.remove("fechada")
+    logo.classList.remove("fechada");
   };
 
-  innerWidth < 720
-    ? mostrarLogoFechada()
-    : mostrarLogoAberta();
+  innerWidth < 720 ? mostrarLogoFechada() : mostrarLogoAberta();
 };
 setInterval(verificarTela, 10);

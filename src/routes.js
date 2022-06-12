@@ -18,9 +18,7 @@ routes.post("/books/cadaster-book", BookController.store);
 routes.get("/books/cadaster-book", BookController.index);
 
 routes.post("/books/upload-capa-livro", async (req,res) => {
-  console.log("aaa")
   await upload(req, res, (err) => {
-    console.log("PEGOU!");
     err
       ? res.end("Ocorreu um erro:" + err)
       : console.log("Upload com sucesso");

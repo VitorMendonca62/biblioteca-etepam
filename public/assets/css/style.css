@@ -64,6 +64,7 @@ header {
   font-size: 25px;
   margin-left: 60px;
   cursor: pointer;
+  width: 22px;
 }
 
 .icon-usuario {

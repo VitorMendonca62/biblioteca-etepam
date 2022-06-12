@@ -9,7 +9,19 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage }).single("capaLivro");
+const fileFilter = (req, file, callback) => {
+  if (
+    file.mimetype.includes("jpeg") ||
+    file.mimetype.includes("png") ||
+    file.mimetype.includes("jpg") 
+  ) {
+    callback(null, true);
+  } else {
+    callback(null, false);
+  }
+};
+
+const upload = multer({ storage, fileFilter }).single("capaLivro");
 
 module.exports = {
   upload,
