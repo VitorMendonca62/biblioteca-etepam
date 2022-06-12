@@ -4,7 +4,7 @@ class Book extends Model {
   static init(sequelize) {
     super.init(
       {
-        titulo: DataTypes.STRING,
+        titulo: DataTypes.STRING(2000),
         autor: DataTypes.STRING,
         sinopse: DataTypes.STRING,
         estrelas: DataTypes.INTEGER,

@@ -18,7 +18,7 @@ module.exports = {
         allowNull: false,
       },
       sinopse: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(2000),
         allowNull: false,
       },
       estrelas: {
