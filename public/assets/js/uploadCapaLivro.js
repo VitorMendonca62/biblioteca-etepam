@@ -9,7 +9,6 @@ document.querySelector("input[type=file]").onchange = (e) => {
   const inputFile = e.target;
   
   formData.append(inputFile.name, inputFile.files[0]);
-  console.log(inputFile.type)
   uploadCapaLivro({
     url: "/books/upload-capa-livro",
     formData,
