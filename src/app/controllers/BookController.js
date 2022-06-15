@@ -1,4 +1,5 @@
 const Book = require("../models/Book");
+const path = require("path");
 
 module.exports = {
   async store(req, res) {
@@ -17,5 +18,10 @@ module.exports = {
   async index(req, res) {
     const books = await Book.findAll();
     return res.json(books);
+  },
+  async show(req, res) {
+    const { id } = req.params;
+    const book = await Book.findByPk(id);
+    res.json(book);
   },
 };

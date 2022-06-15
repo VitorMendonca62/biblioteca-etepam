@@ -12,7 +12,7 @@ class Book extends Model {
         url: {
           type: DataTypes.VIRTUAL,
           get() {
-            return `http://localhost:4041/uploads/${this.path}`;
+            return `http://localhost:4041/assets/img/capas/${this.path}`;
           },
         },
       },

@@ -17,7 +17,13 @@ routes.get("/auth/cadastrar-user", UserController.index);
 routes.post("/books/cadaster-book",upload.single("capaLivro"), BookController.store);
 routes.get("/books/cadaster-book", BookController.index);
 
+routes.get("/books/:id", BookController.show)
+
 // Arquivos estaticos
+
+routes.get("/livros/:id", (req, res) => {
+  res.sendFile(path.resolve(__dirname ,"..","public","html","sinopse.html"));
+});
 routes.get("/login", (req, res) => {
   res.sendFile(path.resolve(__dirname + "/../public/html/login.html"));
 });
