@@ -1,7 +1,16 @@
+header {
+  z-index: 9999;
+}
+body {
+  background-color: #ffefdc;
+
+}
+
 .section-informacoes {
   display: flex;
-  justify-content: left;
   align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
   margin-left: 5rem;
   margin-top: 2.5rem;
   font-weight: 500;
@@ -9,7 +18,6 @@
 }
 .main-informacoes {
   padding-top: 6em;
-  background-color: #ffefdc;
   height: 100vh;
 }
 .foto-livro {
@@ -19,18 +27,30 @@
 }
 
 .titulo {
-  font-size: 2.8rem;
+  font-size: 2.3rem;
   font-weight: 500;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 .autor {
-  font-size: 1.3rem;
-  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
 .sinopse {
-  max-width: 28rem;
+  font-size: 1rem;
+  max-width: 50%;
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
+}
+.estrelas {
+  font-size: 1.6rem;
+  margin-right: .3rem;
+}
+.ligadas {
+  color: #EBA654;
+}
+.desligadas {
+  color: #a8a49e;
+
 }
 .solicitacao {
   width: 12rem;
@@ -46,5 +66,73 @@
   font-weight: 1000;
 }
 .solicitacao:hover {
-  background: #af7d40;
+  background: rgb(231, 138, 23);
+
+}
+
+@media (max-width: 800px) {
+  .sinopse {
+    max-width: 75%;
+  }
+  .section-informacoes, .informacoes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center ;
+  }
+  .titulo {
+    margin-top: 2rem;
+  }
+  .solicitacao {
+    margin-bottom: 1rem;
+  }
+  .section-informacoes, .foto-livro {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 800px) {
+  .sinopse {
+    max-width: 75%;
+  }
+}
+@media (min-width: 900px) {
+  .sinopse {
+    max-width: 65%;
+  }
+}
+@media (min-width: 990px) {
+  .sinopse {
+    max-width: 60%;
+  }
+}
+@media (min-width: 1365px) {
+  .sinopse {
+    max-width: 50%;
+  }
+}
+@media (min-width: 1510px) {
+  .sinopse {
+    max-width: 45%;
+  }
+}
+@media (min-width: 1705px) {
+  .sinopse {
+    max-width: 35%;
+  }
+}
+@media (min-width: 2045px) {
+  .sinopse {
+    max-width: 30%;
+  }
+}
+@media (min-width: 2730px) {
+  .sinopse {
+    max-width: 20%;
+  }
+}
+@media (min-width: 4095px) {
+  .sinopse {
+    max-width: 13%;
+  }
 }

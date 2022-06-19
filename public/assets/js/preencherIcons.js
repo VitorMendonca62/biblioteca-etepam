@@ -45,3 +45,5 @@ setInterval(verificarTela, 10);
 function direcionarParaSinopse(id) {
   window.location.assign(`/livros/${id}`)
 }
+
+

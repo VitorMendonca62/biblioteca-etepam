@@ -5,15 +5,15 @@ async function getBooks() {
 
   await books.forEach((book, i) => {
     categorias[0].children[1].innerHTML += `
-    <div onclick="direcionarParaSinopse(${books[i].id})">
+    <div onclick="direcionarParaSinopse(${books[i].id})" style="cursor: pointer;">
        <img src="${books[i].url}" />
         <p class="livro-titulo">${books[i].titulo}</p>
        <p class="livro-autor">${books[i].autor}</p>
-        <spam class="estrelas"></spam>
+        <span class="estrelas"></span>
      </div>
     `;
   });
-
+  
   return books;
 }
 
