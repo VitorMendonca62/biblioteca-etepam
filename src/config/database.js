@@ -1,8 +1,8 @@
 module.exports = {
     dialect: "mysql",
     host: "localhost",
-    username: "root",
-    password: "$u90Rt3@21",
+    username: "biblioteca_etepam",
+    password: "biblioteca_etepam",
     database: "biblioteca_etepam",
     define: {
         timestamps: true, // Toda tabela possui os campos created_At e update_at

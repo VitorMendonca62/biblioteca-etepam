@@ -1,15 +1,14 @@
 /* Máscaras ER */
 function mascara(input, funcao) {
-  setTimeout((input.value = funcao(input.value)), 1);
+  input.value = funcao(input.value)
 }
 function mascararNome(valor) {
   valor = valor.replace(/\d/g, "");
-  valor = valor.replace(/[^a-z0-9]/gi, "")
+  valor = valor.replace(/[^a-z0-9\u00C0-\u00FF ]/gi, "")
   return valor;
 }
 function mascararMatricula(valor) {
   valor = valor.replace(/\D/g, ""); //Remove tudo o que não é dígito
-  console.log("a")
   return valor;
 }
 function mascararTelefone(valor) {
@@ -24,10 +23,10 @@ window.onload = () => {
   nomeTag("matricula").onkeyup = function() {
     mascara(this, mascararMatricula);
   };
-  nomeTag("telefone").onkeyup = function() {
+  nomeTag("number").onkeyup = function() {
     mascara(this, mascararTelefone);
   };
-  nomeTag("nome").onkeyup = function() {
+  nomeTag("name").onkeyup = function() {
     mascara(this, mascararNome);
   };
 };

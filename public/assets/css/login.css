@@ -23,6 +23,7 @@ form {
   background-color: white;
   border-radius: 10px;
   align-items: center;
+  width: 25rem;
 }
 .parte-superior-forms {
   padding-top: 1rem;
@@ -69,6 +70,13 @@ form {
   font-size: 0.65rem;
   margin-bottom: 5px;
 }
+.select {
+  width: 5.4rem;
+}
+.select-serie {
+  width: 4.5rem;
+
+}
 .botao-login {
   display: flex;
   margin-top: 20px;
@@ -85,15 +93,4 @@ form {
 }
 .botao-login:active {
   box-shadow: none;
-}
-
-@media (max-width: 920px) {
-  main {
-    height: 38em;
-  }
-}
-@media (max-width: 425px) {
-  main {
-    height: 45em;
-  }
 }

@@ -5,29 +5,55 @@ module.exports = {
       name,
       email,
       senha,
+      confirmacao_senha,
       senha_hash,
       number,
       matricula,
       ensino,
       serie,
       curso,
-      admin,
+      admin = false,
     } = req.body;
-    const user = await User.create({
+
+    const dados = [
       name,
       email,
       senha,
+      confirmacao_senha,
       senha_hash,
       number,
       matricula,
       ensino,
       serie,
       curso,
-      admin,
+    ];
+    var erros = [];
+    dados.forEach((dado) => {
+      if (!dado || typeof dado === undefined || dado === null) {
+        erros.push("erro");
+      }
     });
-    user.senha = undefined
-    return res.json(user);
+
+    if (erros.length > 0) {
+      return res.redirect("/cadastro");
+    } else {
+      const user = await User.create({
+        name,
+        email,
+        senha,
+        senha_hash,
+        number,
+        matricula,
+        ensino,
+        serie,
+        curso,
+        admin,
+      });
+      user.senha = undefined;
+      return res.redirect("/");
+    }
   },
+
   async index(req, res) {
     const users = await User.findAll();
     return res.json(users);

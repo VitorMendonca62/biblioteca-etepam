@@ -16,7 +16,6 @@ header {
 }
 body {
   background-color: #fed7a9;
-
 }
 .div-logo-etepam {
   flex-grow: 3;
@@ -44,7 +43,6 @@ body {
   outline: none;
   padding: 10px 5px 10px 15px;
   width: 25em;
-
 }
 
 .nav-header,
@@ -74,9 +72,8 @@ body {
 .icon-usuario {
   margin-right: 10px;
 }
-.nav-header-mobile{
+.nav-header-mobile {
   display: none;
-
 }
 /* FIM DO HEADER */
 /*COMEÇO DO MAIN*/
@@ -147,7 +144,6 @@ body {
   color: yellow;
 }
 
-
 @media (min-width: 1580px) {
   .div-foto-principal {
     background-size: 100vw;
@@ -193,4 +189,13 @@ body {
     background-size: 45em;
     height: 15em;
   }
+}
+
+.alert {
+  position: relative;
+  margin-bottom: 1rem;
+  background-color: #dd999d;
+  /* padding: 1.25rem 100px; */
+  width: 20rem;
+  text-align: center;
 }

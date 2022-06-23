@@ -5,7 +5,6 @@ const elemSinopse = document.getElementsByName("sinopse")[0];
 const div = document.getElementsByClassName("alerts")[0];
 
 function verificarErros(e) {
-
   div.innerHTML = "";
 
   const titulo = elemTitulo.value;
@@ -13,20 +12,14 @@ function verificarErros(e) {
   const estrelas = elemEstrelas.value;
   const sinopse = elemSinopse.value;
 
+  const dados = [titulo, autor, estrelas, sinopse];
   const erros = [];
 
-  if (!titulo || typeof titulo === undefined || titulo === null) {
-    erros.push({ texto: "Título Inválido!" });
-  }
-  if (!autor || typeof autor === undefined || autor === null) {
-    erros.push({ texto: "Autor Inválido!" });
-  }
-  if (!estrelas || typeof estrelas === undefined || estrelas === null) {
-    erros.push({ texto: "Estrelas Inválida!" });
-  }
-  if (!sinopse || typeof sinopse === undefined || sinopse === null) {
-    erros.push({ texto: "Sinopse Inválida!" });
-  }
+  dados.forEach((dado) => {
+    if (!dado || typeof dado === undefined || dado === null) {
+      erros.push({ texto: "Preencha todos os campos obrigatorios" });
+    }
+  });
 
   if (titulo.length < 3) {
     erros.push({ texto: "Título muito pequeno!" });

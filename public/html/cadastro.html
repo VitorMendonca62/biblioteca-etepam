@@ -71,6 +71,8 @@
       </nav>
     </header>
     <main>
+
+      <div class="alerts"></div>
       <form action="http://localhost:4041/auth/cadastrar-user" method="post">
         <div class="parte-superior-forms">
           <a href="/">Voltar</a>
@@ -136,26 +138,26 @@
         <div class="div-selects">
           <p class="login div-ensino selects">
             <label> Ensino</label>
-            <select class="select-ensino" name="ensino" required>
-              <option>Integrado</option>
-              <option>Subsequente</option>
+            <select class="select select-ensino" name="ensino" required>
+              <option value="integrado">Integrado</option>
+              <option value="subsequente">Subsequente</option>
             </select>
           </p>
           <p class="login div-serie selects">
             <label> Série</label>
-            <select class="select-serie" name="serie" required>
-              <option>1°</option>
-              <option>2°</option>
-              <option>3°</option>
+            <select class="select select-serie" name="serie" required>
+              <option value="1">1°</option>
+              <option value="1">2°</option>
+              <option value="1">3°</option>
             </select>
           </p>
           <p class="login div-curso selects">
             <label> Curso</label>
-            <select class="select-curso" name="curso" required>
-              <option>MSI</option>
-              <option>MCT</option>
-              <option>MEC</option>
-              <option>LOG</option>
+            <select class="select select-curso" name="curso" required>
+              <option value="msi">MSI</option>
+              <option value="mct">MCT</option>
+              <option value="mec">MEC</option>
+              <option value="log">LOG</option>
             </select>
         </p>
         </div>
@@ -164,8 +166,8 @@
       </form>
     </main>
   </body>
-  <script src="assets/js/preencherIcons.js"></script>
-  <script src="assets/js/cadastro.js"></script>
-  <script src="assets/js/mascara.js"></script>
+  <script src="../assets/js/preencherIcons.js"></script>
+  <script src="../assets/js/mascara.js"></script>
+  <script src="../assets/js/cadastro.js"></script>
   
 </html>
