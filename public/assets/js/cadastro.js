@@ -11,6 +11,8 @@ const form = document.getElementsByTagName("form")[0];
 const div = document.getElementsByClassName("alerts")[0];
 
 function validarDados(e) {
+  div.innerHTML = "";
+
   const erros = [];
 
   const valorName = nome.value;

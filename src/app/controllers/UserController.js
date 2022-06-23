@@ -20,7 +20,6 @@ module.exports = {
       email,
       senha,
       confirmacao_senha,
-      senha_hash,
       number,
       matricula,
       ensino,
@@ -28,9 +27,9 @@ module.exports = {
       curso,
     ];
     var erros = [];
-    dados.forEach((dado) => {
+    dados.forEach((dado,i) => {
       if (!dado || typeof dado === undefined || dado === null) {
-        erros.push("erro");
+        erros.push({err: "erro"});
       }
     });
 
