@@ -26,19 +26,22 @@ function validarDados(e) {
   const valorCurso = curso.value;
 
   const dados = [
-    valorName,
-    valorEmail,
-    valorSenha,
-    valorConfirmacao_senha,
-    valorNumber,
-    valorMatricula,
-    valorEnsino,
-    valorSerie,
-    valorCurso,
+    nome,
+    email,
+    senha,
+    confirmacao_senha,
+    number,
+    matricula,
+    ensino,
+    serie,
+    curso,
   ];
   dados.forEach((dado) => {
-    if (!dado || typeof dado === undefined || dado === null) {
-      erros.push({ texto: "Preencha todos os campos obrigatorios" });
+    if (!dado.value || typeof dado.value === undefined || dado.value === null) {
+      if (erros.length > 1) {
+      } else {
+        erros.push({ texto: "Preencha todos os campos obrigatorios" });
+      }
     }
   });
 

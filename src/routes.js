@@ -8,16 +8,7 @@ const multerConfig = require('./config/multer');
 const upload = multer(multerConfig)
 
 // Controladoras
-const UserController = require("./app/controllers/UserController");
-const BookController = require("./app/controllers/BookController");
 
-routes.post("/auth/cadastrar-user", UserController.store);
-routes.get("/auth/cadastrar-user", UserController.index);
-
-routes.post("/books/cadaster-book",upload.single("capaLivro"), BookController.store);
-routes.get("/books/cadaster-book", BookController.index);
-
-routes.get("/books/:id", BookController.show)
 
 // Arquivos estaticos
 
